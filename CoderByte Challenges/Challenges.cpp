@@ -56,3 +56,15 @@ int FirstFactorial(int num)
 	return total;
 
 }
+
+string FirstReverse(string str)
+{
+	string invertedString = str;
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		invertedString[i] = str[str.length()-i-1];
+	}
+	// code goes here   
+	return invertedString;
+}
