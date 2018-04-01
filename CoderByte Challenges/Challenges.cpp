@@ -42,3 +42,17 @@ string LongestWord(string sen)
 	// code goes here
 	return longestWord;
 }
+
+int FirstFactorial(int num)
+{
+	long int total = 1;
+	int number = num;
+	while (number > 1)
+	{
+		total = total * number;
+		number--;
+	}
+	// code goes here   
+	return total;
+
+}

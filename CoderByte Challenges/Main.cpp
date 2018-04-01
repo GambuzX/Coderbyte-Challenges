@@ -5,5 +5,5 @@ using namespace std;
 
 void main()
 {
-	cout << LongestWord("I love potatoes");
+	cout << FirstFactorial(8);
 }
