@@ -105,3 +105,19 @@ int SimpleAdding(int num)
 	return total;
 
 }
+
+string LetterCapitalize(string str)
+{
+	if (isalpha(str[0]))
+		str[0] = toupper(str[0]);
+
+	for (int i = 1; i < str.length(); i++)
+	{
+		if (isalpha(str[i]) && str[i - 1] == ' ')
+			str[i] = toupper(str[i]);
+	}
+
+	// code goes here   
+	return str;
+
+}
