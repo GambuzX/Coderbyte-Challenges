@@ -68,3 +68,26 @@ string FirstReverse(string str)
 	// code goes here   
 	return invertedString;
 }
+
+string LetterChanges(string str)
+{
+	string copy = str;
+	for (int i = 0; i < copy.length(); i++)
+	{
+		if (copy[i] == 'z')
+			copy[i] = 'a';
+		else
+			if (isalpha(copy[i]))
+				copy[i] = copy[i] + 1;
+	}
+
+	for (int i = 0; i < copy.length(); i++)
+	{
+		char letter = copy[i];
+		if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+			copy[i] = toupper(copy[i]);
+	}
+
+	// code goes here   
+	return copy;
+}
