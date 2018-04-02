@@ -91,3 +91,17 @@ string LetterChanges(string str)
 	// code goes here   
 	return copy;
 }
+
+int SimpleAdding(int num)
+{
+	int total = 0;
+	while (num > 0)
+	{
+		total += num;
+		num--;
+	}
+
+	// code goes here   
+	return total;
+
+}
