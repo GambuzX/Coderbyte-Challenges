@@ -121,3 +121,45 @@ string LetterCapitalize(string str)
 	return str;
 
 }
+
+string ClosestEnemyII(string matrix[], int rows)
+{
+	int playerRow, playerColumn;
+	int columns = matrix[0].length();
+
+	//Assuming there is always a one
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < columns; j++)
+		{
+			if (matrix[i][j] == '1')
+			{
+				playerRow = i;
+				playerColumn = j;
+			}
+		}
+	}
+
+	int minimumDistance = 9999;
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < columns; j++)
+		{
+			if (matrix[i][j] == '2')
+			{
+				int rowDifference = abs(i - playerRow);
+				if ((columns - rowDifference) < rowDifference)
+					rowDifference = columns - rowDifference;
+
+				int columnDifference = abs(j - playerColumn);
+				if ((rows - columnDifference) < columnDifference)
+					columnDifference = rows - columnDifference;
+
+				int enemyDistance = rowDifference + columnDifference;
+				if (minimumDistance > enemyDistance)
+					minimumDistance = enemyDistance;
+			}
+		}
+	}
+	return to_string(minimumDistance);
+}
